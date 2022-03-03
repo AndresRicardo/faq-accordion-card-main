@@ -60,7 +60,7 @@ body {
 }
 
 #header {
-    width: 70%;
+    width: 235px;
     height: 110px;
     position: relative;
     z-index: 1;
@@ -80,6 +80,7 @@ body {
 
 #container {
     width: 90%;
+    min-width: 250px;
     background-color: white;
     border-radius: 20px;
     @include flex-column-all-center();
