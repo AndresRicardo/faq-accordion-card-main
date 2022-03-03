@@ -1,0 +1,136 @@
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#container {
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+}
+
+#header {
+  width: 70%;
+  background-color: transparent;
+  position: absolute;
+  top: -110px;
+  z-index: 1;
+}
+
+#main {
+  width: 90%;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main #pageTitle {
+  font-size: 3em;
+  color: #1d1e35;
+}
+
+#main #faq {
+  color: #1d1e35;
+}
+
+#main #faq #faqList {
+  list-style: none;
+}
+
+#main #faq #faqList li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+#main #faq #faqList li .justQuestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+#main #faq #faqList li .justQuestion .question {
+  font-size: 14px;
+  cursor: pointer;
+  color: #444;
+}
+
+#main #faq #faqList li .justQuestion .qButton {
+  color: #f47c57;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+#main #faq #faqList li .justQuestion .qButton:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#main #faq #faqList li .answer {
+  color: #999;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=styles.css.map */

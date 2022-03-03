@@ -1,0 +1,141 @@
+// Layout
+
+$size-Mobile: 375px;
+$size-Desktop: 1440px;
+
+// Colors Primary Text
+
+$color-Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$color-Soft-red: hsl(14, 88%, 65%);
+
+// Colors Primary Background gradient:
+
+$color-Soft-violet: hsl(273, 75%, 66%);
+$color-Soft-blue: hsl(240, 73%, 65%);
+
+// Color Neutral Text
+
+$color-Very-dark-grayish-blue: hsl(237, 12%, 33%);
+$color-Dark-grayish-blue: hsl(240, 6%, 50%);
+
+// Colors Neutral Dividers
+
+$color-Light-grayish-blue: hsl(240, 5%, 91%);
+
+// Typography Body Copy
+
+$typ-Font-size: 12px;
+
+// Typography Font
+
+// Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+// Weights: 400, 700
+$typ-Font-family: "Kumbh Sans", sans-serif;
+
+@mixin flex-column-all-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: $typ-Font-family;
+    font-size: $typ-Font-size;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient($color-Soft-violet, $color-Soft-blue);
+    @include flex-column-all-center();
+}
+
+#container {
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+    @include flex-column-all-center();
+    justify-content: start;
+    position: relative;
+}
+
+#header {
+    width: 70%;
+    background-color: transparent;
+    position: absolute;
+    top: -110px;
+    z-index: 1;
+}
+
+#main {
+    width: 90%;
+    padding-top: 110px;
+    padding-bottom: 40px;
+    @include flex-column-all-center();
+
+    #pageTitle {
+        font-size: 3em;
+        color: $color-Very-dark-desaturated-blue;
+    }
+
+    #faq {
+        color: $color-Very-dark-desaturated-blue;
+
+        #faqList {
+            list-style: none;
+
+            li {
+                margin-bottom: 15px;
+                border-bottom: 1px solid $color-Light-grayish-blue;
+
+                .justQuestion {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+
+                    .question {
+                        font-size: 14px;
+                        cursor: pointer;
+                        color: #444;
+                    }
+
+                    .qButton {
+                        color: $color-Soft-red;
+                        font-family: "Material Icons";
+                        font-weight: normal;
+                        font-style: normal;
+                        font-size: 24px; /* Preferred icon size */
+                        display: inline-block;
+                        line-height: 1;
+                        text-transform: none;
+                        letter-spacing: normal;
+                        word-wrap: normal;
+                        white-space: nowrap;
+                        direction: ltr;
+                    }
+                    .qButton:hover {
+                        cursor: pointer;
+                        font-weight: 700;
+                    }
+                }
+
+                .answer {
+                    color: #999;
+                    margin-bottom: 15px;
+                    // display: none;
+                }
+            }
+        }
+    }
+}
+
+// .attribution {
+//     font-size: 11px;
+//     text-align: center;
+// }
+
+// .attribution a {
+//     color: hsl(228, 45%, 44%);
+// }
