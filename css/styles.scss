@@ -76,6 +76,13 @@ body {
         position: absolute;
         top: 110px;
     }
+
+    #heroBox {
+        width: 100%;
+        position: absolute;
+        top: 110px;
+        display: none;
+    }
 }
 
 #container {
@@ -152,11 +159,72 @@ body {
 }
 
 .attribution {
-    margin-top: auto;
+    // margin-top: auto;
     font-size: 11px;
     text-align: center;
 }
 
 .attribution a {
     color: white;
+}
+
+@media (min-width: 700px) {
+    // body {
+    //     flex-direction: row;
+    //     justify-content: space-evenly;
+    //     align-items: center;
+    // }
+    #mainContainer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+
+    #header {
+        width: 45%;
+        height: auto;
+        position: absolute;
+        left: -8px;
+        z-index: 1;
+
+        #hero {
+            width: 100%;
+            position: static;
+            z-index: 2;
+
+            > img {
+                width: 100%;
+                content: url(../images/illustration-woman-online-desktop.svg);
+                background-size: cover;
+            }
+
+            #heroShadow {
+                width: 100%;
+                content: url(../images/bg-pattern-desktop.svg);
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+            #heroBox {
+                width: 50%;
+                content: url(../images/illustration-box-desktop.svg);
+                position: absolute;
+                left: -12%;
+                top: 30%;
+                display: initial;
+                z-index: 4;
+            }
+        }
+    }
+
+    #container {
+        flex-direction: row;
+        justify-content: end;
+        #main {
+            width: 40%;
+            padding-top: 40px;
+            margin-right: 50px;
+        }
+    }
 }
